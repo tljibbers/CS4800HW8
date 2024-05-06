@@ -1,4 +1,4 @@
-public abstract class cheetosSnackDispenseHandler extends SnackDispenseHandler{
+public class cheetosSnackDispenseHandler extends SnackDispenseHandler{
     public cheetosSnackDispenseHandler(SnackDispenseHandler next)
     {
         super(next);

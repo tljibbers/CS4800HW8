@@ -25,13 +25,16 @@ public class VendingMachine {
             if(snack.getQuantity() != 0)
             {
                 getState().DispensingSnack(this);
+                money = money - snack.getPrice();
+             System.out.println("You now have " + money + " dollars");
+                return money;
             }
             else
             {
                 System.out.println("There are no more " + snack.getName());
+                state = new idleState();
+                getState().idle(this);
             }
-            money = money - snack.getPrice();
-            return money;
         }
         else
         {
